@@ -1,0 +1,23 @@
+#include <iostream>
+#include <climits>
+using namespace std;
+    int reverse(int x) { 
+      int rev=0;
+      int digit=0;
+     while(x!=0){
+        digit=x%10;
+        if ( rev > INT_MAX/10 || (rev == INT_MAX/10 && digit > 7) || rev < INT_MIN/10 || (rev == INT_MIN/10 && digit < -8) )
+        {
+         return 0;
+        }
+        rev=rev*10+digit;
+        x=x/10;
+      } 
+      return rev;
+    }
+
+int main() {
+    cout<<reverse(1234);
+    
+    return 0;
+}
