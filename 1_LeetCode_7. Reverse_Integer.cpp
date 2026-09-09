@@ -17,7 +17,10 @@ using namespace std;
     }
 
 int main() {
-    cout<<reverse(1234);
+    int n;
+    cout<<"Enter the value which you want to reverse : ";
+    cin>>n;
+    cout<<"Your reversed value is : "<<reverse(n);
     
     return 0;
 }
