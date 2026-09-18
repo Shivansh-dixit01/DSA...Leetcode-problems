@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Solution {
+public:
+    bool rotateString(string s, string goal) {
+
+        if (s.length() != goal.length()) {
+            return false;
+        }
+
+        string doubled = s + s;
+
+        return doubled.find(goal) != string::npos;
+    }
+};
+
+int main() {
+    Solution s1;
+
+    string s = "abcde";
+    string goal = "cdeab";
+
+    cout << boolalpha << s1.rotateString(s, goal);
+
+    return 0;
+}
